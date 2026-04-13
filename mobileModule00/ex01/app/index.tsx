@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {Button, Alert, TouchableOpacity} from 'react-native';
 
@@ -26,20 +26,25 @@ const styles = StyleSheet.create({
 	}
 });
 
-// <Button 
-// 	title="Try to Press me"
-// 	onPress={() => console.log("Button pressed")}
-// 	color="#28396C"
-// />
-
 const Home = () => {
-	const text = "My drunk talks will get me arrested pretty soon";
+	const initialText = "Hello World!";
+	const [text, setText] = useState(initialText);
+
+	const handlePress = () => {
+		if (text === initialText){
+			setText("My drunk talks will get me arrested pretty soon");
+		}
+		else {
+			setText(initialText);
+		}
+		console.log("Hello World!");
+	}
 	return (
 		<View style={styles.container}>
 			<Text style={styles.title}>{text}</Text>
 
 			<TouchableOpacity style={styles.button}
-				onPress={() => console.log("Button pressed")}>
+				onPress={() => handlePress()}>
 
 				<Text style = {styles.buttonText}>Try to Press Me</Text>
 			</TouchableOpacity>

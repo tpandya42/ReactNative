@@ -1,11 +1,11 @@
 {
   "expo": {
-	"scheme": "ex00",
+	"scheme": "ex01",
 	"experiments": {
 		"typedRoutes": true
 	},
-    "name": "ex00",
-    "slug": "ex00",
+    "name": "ex01",
+    "slug": "ex01",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
